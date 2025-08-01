@@ -32,14 +32,14 @@
 </head>
 <body class="page page4">
   <div class="content">
-    <h1 class="fade-in">Karena hidup itu pilihan 💌</h1>
-    <p class="fade-in delay-1">Pilih salah satu hadiah di bawah ini. Hadiahnya akan muncul setelah kamu memilih.</p>
+    <h1 class="fade-in">Pilih Hadiah💌</h1>
+    <p class="fade-in delay-1">Karena hidup itu selalu ada pilihan, pilih salah satu hadiah di bawah dengan click emoji hadiah, jangan dicobaa satu-satu buat curang yaa sayaaang....</p>
 
     <div class="fade-in delay-2">
-      <div class="gift-option" onclick="showGift('Boneka beruang pink lucu 🧸')">🎁 Pilihan 1</div>
-      <div class="gift-option" onclick="showGift('Kalung cantik dengan liontin hati 💎')">🎁 Pilihan 2</div>
-      <div class="gift-option" onclick="showGift('Buku kenangan penuh cinta 📖')">🎁 Pilihan 3</div>
-      <div class="gift-option" onclick="showGift('Buket bunga mawar merah 💐')">🎁 Pilihan 4</div>
+      <div class="gift-option" onclick="showGift('Photoboth atau Photo Studio')">🎁 Pilihan 1</div>
+      <div class="gift-option" onclick="showGift('Ticket Nonton Bioskop')">🎁 Pilihan 2</div>
+      <div class="gift-option" onclick="showGift('Casing Handphone')">🎁 Pilihan 3</div>
+      <div class="gift-option" onclick="showGift('Mystery Gift')">🎁 Pilihan 4</div>
     </div>
 
     <div class="result fade-in delay-3" id="resultBox">
@@ -58,7 +58,7 @@
     function sendToWA() {
       const message = `Aku dapat hadiah: ${selectedGift}`;
       const encodedMessage = encodeURIComponent(message);
-      const waNumber = '6281234567890'; // Ganti dengan nomor kamu
+      const waNumber = '6285692940673; // Ganti dengan nomor kamu
       window.location.href = `https://wa.me/${waNumber}?text=${encodedMessage}`;
     }
   </script>
