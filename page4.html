@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Halaman 4 - Pilihan Hadiah</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gift-option {
+      background-color: rgba(255,255,255,0.2);
+      padding: 15px 20px;
+      border-radius: 12px;
+      margin: 10px auto;
+      max-width: 400px;
+      font-size: 1.1em;
+      cursor: pointer;
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .gift-option:hover {
+      background-color: rgba(255,255,255,0.3);
+      transform: scale(1.03);
+    }
+    .result {
+      margin-top: 30px;
+      display: none;
+    }
+    .result button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body class="page page4">
+  <div class="content">
+    <h1 class="fade-in">Karena hidup itu pilihan 💌</h1>
+    <p class="fade-in delay-1">Pilih salah satu hadiah di bawah ini. Hadiahnya akan muncul setelah kamu memilih.</p>
+
+    <div class="fade-in delay-2">
+      <div class="gift-option" onclick="showGift('Boneka beruang pink lucu 🧸')">🎁 Pilihan 1</div>
+      <div class="gift-option" onclick="showGift('Kalung cantik dengan liontin hati 💎')">🎁 Pilihan 2</div>
+      <div class="gift-option" onclick="showGift('Buku kenangan penuh cinta 📖')">🎁 Pilihan 3</div>
+      <div class="gift-option" onclick="showGift('Buket bunga mawar merah 💐')">🎁 Pilihan 4</div>
+    </div>
+
+    <div class="result fade-in delay-3" id="resultBox">
+      <h2 id="giftText"></h2>
+      <button onclick="sendToWA()">Terima Hadiah & Chat Aku 💬</button>
+    </div>
+  </div>
+
+  <script>
+    let selectedGift = '';
+    function showGift(gift) {
+      selectedGift = gift;
+      document.getElementById('giftText').innerText = `Kamu memilih: ${gift}`;
+      document.getElementById('resultBox').style.display = 'block';
+    }
+    function sendToWA() {
+      const message = `Aku dapat hadiah: ${selectedGift}`;
+      const encodedMessage = encodeURIComponent(message);
+      const waNumber = '6281234567890'; // Ganti dengan nomor kamu
+      window.location.href = `https://wa.me/${waNumber}?text=${encodedMessage}`;
+    }
+  </script>
+</body>
+</html>
