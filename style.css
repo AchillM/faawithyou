@@ -59,6 +59,16 @@ h1, p, button {
   color: grey;
 }
 
+#giftText {
+  color: #grey;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.gift-option {
+  color: #grey; /* pastikan teks putih */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* supaya terlihat */
+}
+
 button {
   background-color: #ff66a3;
   border: none;
