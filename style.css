@@ -28,6 +28,11 @@ h1, p, button {
   margin: 20px 0;
 }
 
+p {
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
 button {
   background-color: #ff66a3;
   border: none;
