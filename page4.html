@@ -44,7 +44,7 @@
 
     <div class="result fade-in delay-3" id="resultBox">
       <h2 id="giftText"></h2>
-      <button onclick="sendToWA()">Terima Hadiah💬"</button>
+      <button onclick="sendToWA()">Terima Hadiah💬</button>
     </div>
   </div>
 
@@ -58,7 +58,7 @@
     function sendToWA() {
       const message = `Aku dapat hadiah: ${selectedGift}`;
       const encodedMessage = encodeURIComponent(message);
-      const waNumber = '6285692940673; // Ganti dengan nomor kamu
+      const waNumber = '6285692940673'; // Ganti dengan nomor kamu
       window.location.href = `https://wa.me/${waNumber}?text=${encodedMessage}`;
     }
   </script>
